@@ -1,6 +1,7 @@
 import { Button } from '@mui/material';
 import React from 'react';
 import FrontPage from '../FrontPage';
+import StatPage from '../StatPage';
 import './main.css';
 
 interface MainViewProps {
@@ -16,7 +17,7 @@ function MainView(props: MainViewProps) {
       case 1:
         return <Button variant="text">Toinen</Button>;
       case 2:
-        return <Button variant="text">Kolmas</Button>;
+        return <StatPage />;
       default:
         return <Button variant="text">Jiit</Button>;
     }
