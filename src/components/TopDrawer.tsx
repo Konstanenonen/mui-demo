@@ -18,6 +18,9 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import HomeIcon from '@mui/icons-material/Home';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import InsightsIcon from '@mui/icons-material/Insights'
 
 const drawerWidth = 240;
 
@@ -70,7 +73,11 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-function TopDrawer() {
+interface TopDrawerProps {
+  setPage: (page: number) => void;
+}
+
+function TopDrawer(props: TopDrawerProps) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -81,6 +88,11 @@ function TopDrawer() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  const handlePageChange = (page: number) => {
+    setOpen(false);
+    props.setPage(page);
+  }
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -121,16 +133,30 @@ function TopDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => handlePageChange(0)}>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary="Etusivu" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => handlePageChange(1)}>
+              <ListItemIcon>
+                <FavoriteBorderIcon />
+              </ListItemIcon>
+              <ListItemText primary="Suosikit" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => handlePageChange(2)}>
+              <ListItemIcon>
+                <InsightsIcon />
+              </ListItemIcon>
+              <ListItemText primary="Tilastot" />
+            </ListItemButton>
+          </ListItem>
         </List>
         <Divider />
         <List>

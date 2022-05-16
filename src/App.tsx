@@ -11,7 +11,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="application">
-        <TopDrawer />
+        <TopDrawer setPage={setPage} />
         <div className="main-area">
           <MainView page={page} setPage={setPage} />
         </div>
