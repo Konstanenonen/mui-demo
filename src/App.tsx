@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BottomNav from "./components/BottomNav";
+import BottomNav from "./components/BottomNav/BottomNav";
 import TopDrawer from "./components/TopDrawer";
 import MainView from "./components/MainView/MainView";
 import theme from "./theme";

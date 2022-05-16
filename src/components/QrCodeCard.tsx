@@ -24,11 +24,11 @@ function QrCodeCard() {
           Näytä tätä maksaessasi kassalla.
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Kanta-asiakasnumero: 23123123
+          Kanta-asiakasnumeroi: <span>23123123</span>
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Nappi</Button>
+        <Button size="small">Profiilisi</Button>
       </CardActions>
     </Card>
   );
