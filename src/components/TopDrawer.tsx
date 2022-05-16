@@ -21,6 +21,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import HomeIcon from '@mui/icons-material/Home';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import InsightsIcon from '@mui/icons-material/Insights'
+import DarkModeSwitch from './DarkModeSwitch';
 
 const drawerWidth = 240;
 
@@ -75,6 +76,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 interface TopDrawerProps {
   setPage: (page: number) => void;
+  setDarkMode: (value: boolean) => void;
 }
 
 function TopDrawer(props: TopDrawerProps) {
@@ -109,8 +111,9 @@ function TopDrawer(props: TopDrawerProps) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Kierrätyskeskus
+            Kierrätyskeskus App
           </Typography>
+          <DarkModeSwitch setDarkMode={props.setDarkMode} />
         </Toolbar>
       </AppBar>
       <Drawer
