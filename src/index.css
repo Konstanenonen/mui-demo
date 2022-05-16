@@ -16,7 +16,3 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-.main-area {
-  flex: 1;
-}
