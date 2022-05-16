@@ -6,29 +6,31 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Rick from '../images/rick.svg';
+import { fontWeight } from '@mui/system';
 
 function QrCodeCard() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ width: 350 }}>
       <CardMedia
+        sx={{padding: 7}}
         component="img"
-        height="275"
+        height="350"
         image={Rick}
         alt="green iguana"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Kanta-asiakaskortti
+        <Typography sx={{ textAlign: "center" }} gutterBottom variant="h5" component="div">
+          Kanta-asiakaskorttisi
         </Typography>
-        <Typography sx={{mb: 1}} variant="body2" color="text.secondary">
-          Näytä tätä maksaessasi kassalla.
+        <Typography sx={{ mb: 1, textAlign: "center" }} variant="body2" color="text.secondary">
+          Näytä tämä kortti maksaessasi kassalla.
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Kanta-asiakasnumeroi: <span>23123123</span>
+        <Typography  sx={{ textAlign: "center" }} variant="body2" color="text.secondary">
+          Kanta-asiakasnumerosi: <span style={{ fontWeight: "bold" }}>23123123</span>
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Profiilisi</Button>
+      <CardActions sx={{ display: "flex", justifyContent: "center" }}>
+        <Button size="small">Avaa Profiili</Button>
       </CardActions>
     </Card>
   );

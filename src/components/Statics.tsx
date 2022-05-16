@@ -19,16 +19,16 @@ function Statics() {
     >
       <ListItem>
         <ListItemAvatar>
-          <Avatar>
+          <Avatar sx={{ bgcolor: "#00A77E" }}>
             <Co2Icon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="CO2 päästöä säästetty" secondary="20 kg" />
+        <ListItemText primary="CO2 päästöjä säästetty" secondary="20 kg" />
       </ListItem>
       <Divider variant="inset" component="li" />
       <ListItem>
         <ListItemAvatar>
-          <Avatar>
+          <Avatar sx={{ bgcolor: "#00A77E" }}>
             <InvertColorsIcon />
           </Avatar>
         </ListItemAvatar>
@@ -37,7 +37,7 @@ function Statics() {
       <Divider variant="inset" component="li" />
       <ListItem>
         <ListItemAvatar>
-          <Avatar>
+          <Avatar sx={{ bgcolor: "#00A77E" }}>
             <AccessTimeIcon />
           </Avatar>
         </ListItemAvatar>

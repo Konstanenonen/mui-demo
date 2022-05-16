@@ -1,6 +1,7 @@
 import React from 'react';
 import MediaCard from './QrCodeCard';
 import Statics from './Statics';
+import StaticsCard from './StaticsCard';
 
 function FrontPage() {
   return (
@@ -8,6 +9,7 @@ function FrontPage() {
       <h1>Etusivu</h1>
       <MediaCard />
       <Statics />
+      <StaticsCard />
     </>
   );
 }
