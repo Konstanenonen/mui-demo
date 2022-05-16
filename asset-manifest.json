@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mui-demo/static/css/main.2bb61b02.css",
-    "main.js": "/mui-demo/static/js/main.988e4cb5.js",
+    "main.js": "/mui-demo/static/js/main.77267d2d.js",
     "static/media/cool-chart.png": "/mui-demo/static/media/cool-chart.8b9fb47c6d5b10b94315.png",
     "static/media/rick.svg": "/mui-demo/static/media/rick.ef7e56d24e7f4f4a180d635bf18b7d14.svg",
     "index.html": "/mui-demo/index.html",
     "main.2bb61b02.css.map": "/mui-demo/static/css/main.2bb61b02.css.map",
-    "main.988e4cb5.js.map": "/mui-demo/static/js/main.988e4cb5.js.map"
+    "main.77267d2d.js.map": "/mui-demo/static/js/main.77267d2d.js.map"
   },
   "entrypoints": [
     "static/css/main.2bb61b02.css",
-    "static/js/main.988e4cb5.js"
+    "static/js/main.77267d2d.js"
   ]
 }
