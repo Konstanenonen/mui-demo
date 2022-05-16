@@ -12,7 +12,7 @@ interface StaticsCardProps {
 
 function StaticsCard(props: StaticsCardProps) {
   return (
-    <Card sx={{ width: 350 }}>
+    <Card sx={{ width: 300 }}>
       <CardActionArea>
         <CardMedia
           component="img"

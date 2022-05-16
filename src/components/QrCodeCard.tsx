@@ -8,11 +8,11 @@ import Rick from '../images/rick.svg';
 
 function QrCodeCard() {
   return (
-    <Card sx={{ width: 350 }}>
+    <Card sx={{ width: 300 }}>
       <CardMedia
-        sx={{padding: 7}}
+        sx={{padding: 5}}
         component="img"
-        height="350"
+        height="300"
         image={Rick}
         alt="green iguana"
       />
