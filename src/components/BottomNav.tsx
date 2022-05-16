@@ -3,7 +3,7 @@ import { BottomNavigationAction } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import InsightsIcon from "@mui/icons-material/Insights";
-import "./nav.css";
+import Paper from "@mui/material/Paper";
 
 interface BottomNavProps {
   setPage: (page: number) => void;
@@ -12,7 +12,10 @@ interface BottomNavProps {
 
 function BottomNav(props: BottomNavProps) {
   return (
-    <div className="bottom-nav">
+    <Paper
+      sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+      elevation={3}
+    >
       <BottomNavigation
         showLabels
         value={props.page}
@@ -27,7 +30,7 @@ function BottomNav(props: BottomNavProps) {
         />
         <BottomNavigationAction label="Tilastot" icon={<InsightsIcon />} />
       </BottomNavigation>
-    </div>
+    </Paper>
   );
 }
 
