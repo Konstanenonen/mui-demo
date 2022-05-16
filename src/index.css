@@ -4,3 +4,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+:root {
+  height: 100vh;
+  width: 100vw;
+}
+
+.application {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-area {
+  flex: 1;
+}
