@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import React from 'react';
-import MediaCard from '../MediaCard';
+import FrontPage from '../FrontPage';
 import './main.css';
 
 interface MainViewProps {
@@ -12,13 +12,13 @@ function MainView(props: MainViewProps) {
   function currentPage(page: number) {
     switch (page) {
       case 0:
-        return <MediaCard />;
+        return <FrontPage />;
       case 1:
-        return <Button variant="text">Text</Button>;
-      case 2:
         return <Button variant="text">Toinen</Button>;
+      case 2:
+        return <Button variant="text">Kolmas</Button>;
       default:
-        return <MediaCard />;
+        return <Button variant="text">Jiit</Button>;
     }
   }
 

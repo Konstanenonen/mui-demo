@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Rick from '../images/rick.svg';
 
-function MediaCard() {
+function QrCodeCard() {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -20,7 +20,7 @@ function MediaCard() {
         <Typography gutterBottom variant="h5" component="div">
           Kanta-asiakaskortti
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography sx={{mb: 1}} variant="body2" color="text.secondary">
           Näytä tätä maksaessasi kassalla.
         </Typography>
         <Typography variant="body2" color="text.secondary">
@@ -34,5 +34,5 @@ function MediaCard() {
   );
 }
 
-export default MediaCard;
+export default QrCodeCard;
 
