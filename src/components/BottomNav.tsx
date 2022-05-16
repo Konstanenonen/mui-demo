@@ -4,6 +4,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import InsightsIcon from "@mui/icons-material/Insights";
 import Paper from "@mui/material/Paper";
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 interface BottomNavProps {
   setPage: (page: number) => void;
@@ -24,8 +25,9 @@ function BottomNav(props: BottomNavProps) {
         }}
       >
         <BottomNavigationAction label="Etusivu" icon={<HomeIcon />} />
+        <BottomNavigationAction label="Kauppa" icon={<ShoppingBagIcon />} />
         <BottomNavigationAction
-          label="Suosikit"
+          label="Etusi"
           icon={<FavoriteBorderIcon />}
         />
         <BottomNavigationAction label="Tilastot" icon={<InsightsIcon />} />

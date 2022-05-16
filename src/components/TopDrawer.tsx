@@ -22,6 +22,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import InsightsIcon from '@mui/icons-material/Insights'
 import DarkModeSwitch from './DarkModeSwitch/DarkModeSwitch';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 const drawerWidth = 240;
 
@@ -147,13 +148,21 @@ function TopDrawer(props: TopDrawerProps) {
           <ListItem disablePadding>
             <ListItemButton onClick={() => handlePageChange(1)}>
               <ListItemIcon>
-                <FavoriteBorderIcon />
+                <ShoppingBagIcon />
               </ListItemIcon>
-              <ListItemText primary="Suosikit" />
+              <ListItemText primary="Kauppa" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
             <ListItemButton onClick={() => handlePageChange(2)}>
+              <ListItemIcon>
+                <FavoriteBorderIcon />
+              </ListItemIcon>
+              <ListItemText primary="Etusi" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => handlePageChange(3)}>
               <ListItemIcon>
                 <InsightsIcon />
               </ListItemIcon>
