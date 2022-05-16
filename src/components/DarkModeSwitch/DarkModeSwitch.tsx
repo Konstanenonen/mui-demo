@@ -2,6 +2,7 @@ import { styled } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
+import './darkmode.css';
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -56,7 +57,7 @@ interface DarkModeSwitchProps {
 
 function DarkModeSwitch(props: DarkModeSwitchProps) {
   return (
-    <FormGroup sx={{ ml: 5 }}>
+    <FormGroup className="dark-mode-switch" sx={{ ml: 5 }}>
       <FormControlLabel
         control={<MaterialUISwitch onClick={
           () => props.setDarkMode((prevState: boolean) => !prevState)

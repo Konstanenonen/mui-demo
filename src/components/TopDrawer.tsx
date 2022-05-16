@@ -21,7 +21,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import HomeIcon from '@mui/icons-material/Home';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import InsightsIcon from '@mui/icons-material/Insights'
-import DarkModeSwitch from './DarkModeSwitch';
+import DarkModeSwitch from './DarkModeSwitch/DarkModeSwitch';
 
 const drawerWidth = 240;
 
@@ -110,8 +110,8 @@ function TopDrawer(props: TopDrawerProps) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Kierrätyskeskus App
+          <Typography sx={{ display: !open ? null : "none" }} variant="h6" noWrap component="div">
+            Kierrätyskeskus
           </Typography>
           <DarkModeSwitch setDarkMode={props.setDarkMode} />
         </Toolbar>
