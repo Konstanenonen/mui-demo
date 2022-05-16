@@ -6,6 +6,7 @@ import './main.css';
 
 interface MainViewProps {
   page: number;
+  setPage: (page: number) => void;
 }
 
 function MainView(props: MainViewProps) {
@@ -13,7 +14,7 @@ function MainView(props: MainViewProps) {
   function currentPage(page: number) {
     switch (page) {
       case 0:
-        return <FrontPage />;
+        return <FrontPage setPage={props.setPage} />;
       case 1:
         return <Button variant="text">Toinen</Button>;
       case 2:

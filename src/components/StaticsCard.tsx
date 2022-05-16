@@ -6,7 +6,11 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import Chart from '../images/cool-chart.png';
 
-function StaticsCard() {
+interface StaticsCardProps {
+  setPage: (page: number) => void;
+}
+
+function StaticsCard(props: StaticsCardProps) {
   return (
     <Card sx={{ width: 350 }}>
       <CardActionArea>
@@ -27,7 +31,7 @@ function StaticsCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button onClick={() => {props.setPage(2)}} size="small" color="primary">
           Avaa tilastot
         </Button>
       </CardActions>

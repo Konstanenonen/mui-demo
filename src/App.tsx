@@ -13,9 +13,9 @@ function App() {
       <div className="application">
         <TopDrawer />
         <div className="main-area">
-          <MainView page={page} />
+          <MainView page={page} setPage={setPage} />
         </div>
-        <BottomNav setPage={setPage} />
+        <BottomNav page={page} setPage={setPage} />
       </div>
     </ThemeProvider>
   );

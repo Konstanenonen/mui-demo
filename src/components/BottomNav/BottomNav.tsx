@@ -8,17 +8,15 @@ import './nav.css';
 
 interface BottomNavProps {
   setPage: (page: number) => void;
+  page: number;
 }
 
 function BottomNav(props: BottomNavProps) {
-  const [selected, setSelected] = useState<number>(0);
-
   return (
     <BottomNavigation
       showLabels
-      value={selected}
+      value={props.page}
       onChange={(event, newValue) => {
-        setSelected(newValue);
         props.setPage(newValue);
       }}
       className="bottom-nav"
