@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mui-demo/static/css/main.2ef51d8e.css",
-    "main.js": "/mui-demo/static/js/main.1e44d8e2.js",
+    "main.js": "/mui-demo/static/js/main.f032858d.js",
     "static/media/bike.jpg": "/mui-demo/static/media/bike.985f6e7dc8e9577ef6b3.jpg",
     "static/media/cool-chart.png": "/mui-demo/static/media/cool-chart.8b9fb47c6d5b10b94315.png",
     "static/media/rick.svg": "/mui-demo/static/media/rick.ef7e56d24e7f4f4a180d635bf18b7d14.svg",
     "index.html": "/mui-demo/index.html",
     "main.2ef51d8e.css.map": "/mui-demo/static/css/main.2ef51d8e.css.map",
-    "main.1e44d8e2.js.map": "/mui-demo/static/js/main.1e44d8e2.js.map"
+    "main.f032858d.js.map": "/mui-demo/static/js/main.f032858d.js.map"
   },
   "entrypoints": [
     "static/css/main.2ef51d8e.css",
-    "static/js/main.1e44d8e2.js"
+    "static/js/main.f032858d.js"
   ]
 }
