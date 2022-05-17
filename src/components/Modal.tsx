@@ -39,10 +39,10 @@ function BasicModal(props: BasicModalProps) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
+          <Typography sx={{ color: "black" }} id="modal-modal-title" variant="h6" component="h2">
             {props.title}
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          <Typography id="modal-modal-description" sx={{ mt: 2, color: "black"  }}>
             {props.text}
           </Typography>
         </Box>
