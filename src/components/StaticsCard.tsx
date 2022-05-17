@@ -19,6 +19,7 @@ function StaticsCard(props: StaticsCardProps) {
           height="225"
           image={Chart}
           alt="green iguana"
+          onClick={() => {props.setPage(3)}}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
