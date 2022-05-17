@@ -6,11 +6,14 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import Chart from '../images/cool-chart.png';
 
-interface StaticsCardProps {
+interface ReusableCardProps {
   setPage: (page: number) => void;
+  destinationPage: number;
+  title: string;
+  text: string;
 }
 
-function StaticsCard(props: StaticsCardProps) {
+function ReusableCard(props: ReusableCardProps) {
   return (
     <Card sx={{ width: 300 }}>
       <CardActionArea>
@@ -19,20 +22,19 @@ function StaticsCard(props: StaticsCardProps) {
           height="225"
           image={Chart}
           alt="green iguana"
-          onClick={() => {props.setPage(3)}}
+          onClick={() => {props.setPage(props.destinationPage)}}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Kierrätyksesi vaikutus
+            {props.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Katso kaavioiden avulla kuinka paljon asiointisi Kierrätyskeskuksessa on
-            säästänyt luontoa verrattuna mediaanikuluttajaan.
+            {props.text}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button onClick={() => {props.setPage(3)}} size="small" color="primary">
+        <Button onClick={() => {props.setPage(props.destinationPage)}} size="small" color="primary">
           Avaa tilastot
         </Button>
       </CardActions>
@@ -40,4 +42,4 @@ function StaticsCard(props: StaticsCardProps) {
   );
 }
 
-export default StaticsCard;
+export default ReusableCard;

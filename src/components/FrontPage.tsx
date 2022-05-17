@@ -1,7 +1,7 @@
-import React from 'react';
-import QrCodeCard from './QrCodeCard';
-import Statics from './Statics';
-import StaticsCard from './StaticsCard';
+import React from "react";
+import QrCodeCard from "./QrCodeCard";
+import ReusableCard from "./ReusableCard";
+import Statics from "./Statics";
 
 interface FrontPageProps {
   setPage: (page: number) => void;
@@ -13,7 +13,12 @@ function FrontPage(props: FrontPageProps) {
       <h1>Etusivu</h1>
       <QrCodeCard />
       <Statics />
-      <StaticsCard setPage={props.setPage} />
+      <ReusableCard
+        setPage={props.setPage}
+        destinationPage={3}
+        title="Kierrätyksesi vaikutus"
+        text="Katso kaavioiden avulla kuinka paljon asiointisi Kierrätyskeskuksessa on säästänyt luontoa verrattuna mediaanikuluttajaan."
+      />
     </>
   );
 }
