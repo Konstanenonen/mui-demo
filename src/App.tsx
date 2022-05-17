@@ -17,9 +17,9 @@ function App() {
   const [page, setPage] = useState<number>(0);
   const [darkMode, setDarkMode] = useState<boolean>(false);
   const [customerScore, setCustomerScore] = useState<customerScore>({
-    co2: 10,
-    water: 120,
-    rentDays: 3,
+    co2: 5,
+    water: 10,
+    rentDays: 1,
   });
 
   return (
