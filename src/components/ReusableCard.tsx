@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import Chart from '../images/cool-chart.png';
 import Bike from '../images/bike.jpg';
+import Shirts from '../images/shirts.jpg';
 
 interface ReusableCardProps {
   handleClick: () => void;
@@ -23,6 +24,8 @@ function ReusableCard(props: ReusableCardProps) {
         return Chart;
       case "bike":
         return Bike;
+      case "shirts":
+        return Shirts;
       default:
         return Chart;
     }
@@ -32,13 +35,12 @@ function ReusableCard(props: ReusableCardProps) {
 
   return (
     <Card sx={{ maxWidth: 300 }}>
-      <CardActionArea>
+      <CardActionArea onClick={props.handleClick}>
         <CardMedia
           component="img"
           height={props.imageHeight}
           image={correctImage}
           alt="green iguana"
-          onClick={props.handleClick}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

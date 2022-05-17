@@ -21,7 +21,7 @@ function StorePage(props: StorePageProps) {
           imageHeight={125}
           handleClick={() => setItemAmount((prevState) => prevState + 1)}
           imageName="bike"
-          title="Maastopyörä"
+          title="Pyörä"
           buttonText="Osta"
           text="100 €"
         />
@@ -29,7 +29,7 @@ function StorePage(props: StorePageProps) {
           imageHeight={125}
           handleClick={() => setItemAmount((prevState) => prevState + 1)}
           imageName="bike"
-          title="Maastopyörä"
+          title="Pyörä"
           buttonText="Osta"
           text="100 €"
         />
@@ -37,7 +37,7 @@ function StorePage(props: StorePageProps) {
           imageHeight={125}
           handleClick={() => setItemAmount((prevState) => prevState + 1)}
           imageName="bike"
-          title="Maastopyörä"
+          title="Pyörä"
           buttonText="Osta"
           text="100 €"
         />
@@ -45,7 +45,7 @@ function StorePage(props: StorePageProps) {
           imageHeight={125}
           handleClick={() => setItemAmount((prevState) => prevState + 1)}
           imageName="bike"
-          title="Maastopyörä"
+          title="Pyörä"
           buttonText="Osta"
           text="100 €"
         />
@@ -53,7 +53,7 @@ function StorePage(props: StorePageProps) {
           imageHeight={125}
           handleClick={() => setItemAmount((prevState) => prevState + 1)}
           imageName="bike"
-          title="Maastopyörä"
+          title="Pyörä"
           buttonText="Osta"
           text="100 €"
         />
@@ -61,7 +61,7 @@ function StorePage(props: StorePageProps) {
           imageHeight={125}
           handleClick={() => setItemAmount((prevState) => prevState + 1)}
           imageName="bike"
-          title="Maastopyörä"
+          title="Pyörä"
           buttonText="Osta"
           text="100 €"
         />

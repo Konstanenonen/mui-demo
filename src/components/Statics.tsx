@@ -50,7 +50,7 @@ function Statics() {
             <AccessTimeIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Vuokrapäiviä kerätty" secondary="10 tuntia" />
+        <ListItemText primary="Vuokrapäiviä kerätty" secondary="3 päivää" />
         <Modal
           title="Vuokrapäiviä kerätty"
           text="Kanta-asiakkaana ostoksesi kerryttävät vuokrapäiviä, joiden avulla voit lainata meiltä esimerkiksi polkupyörän."
