@@ -5,6 +5,7 @@ import MainView from "./components/MainView/MainView";
 import { theme, darkTheme } from "./theme";
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
+import Disclaimer from "./components/Disclaimer";
 
 function App() {
   const [page, setPage] = useState<number>(0);
@@ -14,6 +15,7 @@ function App() {
     <>
       <CssBaseline />
       <ThemeProvider theme={darkMode ? darkTheme : theme}>
+        <Disclaimer />
         <div className="application">
           <TopDrawer setDarkMode={setDarkMode} setPage={setPage} />
           <div className="main-area">
