@@ -15,8 +15,7 @@ function FrontPage(props: FrontPageProps) {
       <Statics />
       <ReusableCard
         imageHeight={225}
-        setPage={props.setPage}
-        destinationPage={3}
+        handleClick={() => props.setPage(3)}
         title="Kierrätyksesi vaikutus"
         imageName="chart"
         buttonText="Tilastot"

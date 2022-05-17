@@ -11,8 +11,7 @@ function BenefitsPage(props: BenefitsPageProps) {
       <h1>Kanta-asiakasedut</h1>
       <ReusableCard
         imageHeight={225}
-        setPage={props.setPage}
-        destinationPage={1}
+        handleClick={() => props.setPage(1)}
         imageName="bike"
         title="Käytä vuokrapäiväsi"
         buttonText="Vuokraus"

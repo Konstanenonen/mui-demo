@@ -8,7 +8,7 @@ interface StorePageProps {
 }
 
 function StorePage(props: StorePageProps) {
-  const [basketAmount, setBasketAmount] = useState<number>(3);
+  const [itemAmount, setItemAmount] = useState<number>(0);
 
   return (
     <>
@@ -16,8 +16,7 @@ function StorePage(props: StorePageProps) {
       <div className="grid">
         <ReusableCard
           imageHeight={125}
-          setPage={props.setPage}
-          destinationPage={1}
+          handleClick={() => setItemAmount((prevState) => prevState + 1)}
           imageName="bike"
           title="Pyörä"
           buttonText="Osta"
@@ -25,8 +24,7 @@ function StorePage(props: StorePageProps) {
         />
         <ReusableCard
           imageHeight={125}
-          setPage={props.setPage}
-          destinationPage={1}
+          handleClick={() => setItemAmount((prevState) => prevState + 1)}
           imageName="bike"
           title="Pyörä"
           buttonText="Osta"
@@ -34,8 +32,7 @@ function StorePage(props: StorePageProps) {
         />
         <ReusableCard
           imageHeight={125}
-          setPage={props.setPage}
-          destinationPage={1}
+          handleClick={() => setItemAmount((prevState) => prevState + 1)}
           imageName="bike"
           title="Pyörä"
           buttonText="Osta"
@@ -43,8 +40,7 @@ function StorePage(props: StorePageProps) {
         />
         <ReusableCard
           imageHeight={125}
-          setPage={props.setPage}
-          destinationPage={1}
+          handleClick={() => setItemAmount((prevState) => prevState + 1)}
           imageName="bike"
           title="Pyörä"
           buttonText="Osta"
@@ -52,8 +48,7 @@ function StorePage(props: StorePageProps) {
         />
         <ReusableCard
           imageHeight={125}
-          setPage={props.setPage}
-          destinationPage={1}
+          handleClick={() => setItemAmount((prevState) => prevState + 1)}
           imageName="bike"
           title="Pyörä"
           buttonText="Osta"
@@ -61,8 +56,7 @@ function StorePage(props: StorePageProps) {
         />
         <ReusableCard
           imageHeight={125}
-          setPage={props.setPage}
-          destinationPage={1}
+          handleClick={() => setItemAmount((prevState) => prevState + 1)}
           imageName="bike"
           title="Pyörä"
           buttonText="Osta"
@@ -70,7 +64,7 @@ function StorePage(props: StorePageProps) {
         />
       </div>
       <div className="bottom-right">
-        <ControlledSpeedDial />
+        <ControlledSpeedDial setItemAmount={setItemAmount} itemAmount={itemAmount} />
       </div>
     </>
   );

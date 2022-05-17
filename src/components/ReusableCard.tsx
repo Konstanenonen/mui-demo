@@ -8,8 +8,7 @@ import Chart from '../images/cool-chart.png';
 import Bike from '../images/bike.jpg';
 
 interface ReusableCardProps {
-  setPage: (page: number) => void;
-  destinationPage: number;
+  handleClick: () => void;
   title: string;
   text: string;
   imageName: string;
@@ -39,7 +38,7 @@ function ReusableCard(props: ReusableCardProps) {
           height={props.imageHeight}
           image={correctImage}
           alt="green iguana"
-          onClick={() => {props.setPage(props.destinationPage)}}
+          onClick={props.handleClick}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -51,7 +50,7 @@ function ReusableCard(props: ReusableCardProps) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button onClick={() => {props.setPage(props.destinationPage)}} size="small" color="primary">
+        <Button onClick={props.handleClick} size="small" color="primary">
           {props.buttonText}
         </Button>
       </CardActions>
