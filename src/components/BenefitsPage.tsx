@@ -15,7 +15,7 @@ function BenefitsPage(props: BenefitsPageProps) {
         imageName="bike"
         title="Käytä vuokrapäiväsi"
         buttonText="Vuokraus"
-        text="Ostamalla tuotteita Kierrätyskeskuksen kanta-asiakkaana kerrytät vuokrapäiviä, joiden avulla voit lainta meiltä esimerkiksi pyöriä ja työkaluja."
+        text="Ostamalla tuotteita Kierrätyskeskuksen kanta-asiakkaana kerrytät vuokrapäiviä, joiden avulla voit lainata meiltä esimerkiksi pyöriä ja työkaluja."
       />
     </>
   );
