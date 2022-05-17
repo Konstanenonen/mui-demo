@@ -3,13 +3,12 @@ import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import CategoryIcon from "@mui/icons-material/Category";
+import Divider from "@mui/material/Divider";
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
@@ -44,28 +43,27 @@ function ShopDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
+        {[
+          "Polkupyörät",
+          "Kirjat",
+          "Koti ja asuminen",
+          "Viihde ja elktroniikka",
+          "Urheilu ja Harrastukset",
+          "Käsityö ja askartelu",
+          "Ale",
+          "Uutuudet",
+        ].map((text, index) => (
+          <>
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <CategoryIcon />
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+            <Divider />
+          </>
         ))}
       </List>
     </Box>
@@ -73,7 +71,12 @@ function ShopDrawer() {
 
   return (
     <div>
-      <Button sx={{backgroundColor: '#00A77E', color: 'white'}} onClick={toggleDrawer("top", true)}>{"Kategoriat"}</Button>
+      <Button
+        sx={{ backgroundColor: "#00A77E", color: "white" }}
+        onClick={toggleDrawer("top", true)}
+      >
+        {"Kategoriat"}
+      </Button>
       <SwipeableDrawer
         anchor={"top"}
         open={state["top"]}
