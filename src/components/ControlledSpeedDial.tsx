@@ -35,7 +35,7 @@ function ControlledSpeedDial(props: ControlledSpeedDialProps) {
           <ShoppingCartIcon />
         </Badge>
       }
-        onClose={handleClose}
+        onClose={() => setOpen(false)}
         onOpen={handleOpen}
         open={open}
       >
