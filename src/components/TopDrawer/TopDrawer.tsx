@@ -19,10 +19,11 @@ import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import InsightsIcon from '@mui/icons-material/Insights'
-import DarkModeSwitch from './DarkModeSwitch/DarkModeSwitch';
+import DarkModeSwitch from '../DarkModeSwitch/DarkModeSwitch';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PersonIcon from '@mui/icons-material/Person';
+import './top.css';
 
 const drawerWidth = 240;
 
@@ -98,9 +99,9 @@ function TopDrawer(props: TopDrawerProps) {
   }
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box className="top-nav" sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar sx={{ backgroundColor: '#00A77E' }} position="fixed" open={open}>
+      <AppBar className="top-nav" sx={{ backgroundColor: '#00A77E' }} position="fixed" open={open}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -136,7 +137,7 @@ function TopDrawer(props: TopDrawerProps) {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <List>
+        <List className="top-nav">
           <ListItem disablePadding>
             <ListItemButton onClick={() => handlePageChange(0)}>
               <ListItemIcon>
@@ -190,7 +191,7 @@ function TopDrawer(props: TopDrawerProps) {
           </ListItem>
         </List>
       </Drawer>
-      <Main open={open}>
+      <Main className="top-nav" open={open}>
         <DrawerHeader />
       </Main>
     </Box>

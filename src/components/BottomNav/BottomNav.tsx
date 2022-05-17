@@ -5,6 +5,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import InsightsIcon from "@mui/icons-material/Insights";
 import Paper from "@mui/material/Paper";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import './bottom.css';
 
 interface BottomNavProps {
   setPage: (page: number) => void;
@@ -14,6 +15,7 @@ interface BottomNavProps {
 function BottomNav(props: BottomNavProps) {
   return (
     <Paper
+      className="bottom-nav"
       sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
       elevation={3}
     >

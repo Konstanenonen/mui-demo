@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import BottomNav from "./components/BottomNav";
-import TopDrawer from "./components/TopDrawer";
+import BottomNav from "./components/BottomNav/BottomNav";
+import TopDrawer from "./components/TopDrawer/TopDrawer";
 import MainView from "./components/MainView/MainView";
 import { theme, darkTheme } from "./theme";
 import { ThemeProvider } from "@emotion/react";
