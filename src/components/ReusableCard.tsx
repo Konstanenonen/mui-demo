@@ -5,22 +5,38 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import Chart from '../images/cool-chart.png';
+import Bike from '../images/bike.jpg';
 
 interface ReusableCardProps {
   setPage: (page: number) => void;
   destinationPage: number;
   title: string;
   text: string;
+  imageName: string;
+  buttonText: string;
 }
 
 function ReusableCard(props: ReusableCardProps) {
+  function chooseImage(name: string) {
+    switch (name) {
+      case "chart":
+        return Chart;
+      case "bike":
+        return Bike;
+      default:
+        return Chart;
+    }
+  }
+
+  const correctImage = chooseImage(props.imageName);
+
   return (
     <Card sx={{ width: 300 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="225"
-          image={Chart}
+          image={correctImage}
           alt="green iguana"
           onClick={() => {props.setPage(props.destinationPage)}}
         />
@@ -35,7 +51,7 @@ function ReusableCard(props: ReusableCardProps) {
       </CardActionArea>
       <CardActions>
         <Button onClick={() => {props.setPage(props.destinationPage)}} size="small" color="primary">
-          Avaa tilastot
+          {props.buttonText}
         </Button>
       </CardActions>
     </Card>

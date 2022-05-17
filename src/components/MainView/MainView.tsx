@@ -19,7 +19,7 @@ function MainView(props: MainViewProps) {
       case 1:
         return <Button variant="text">Verkkokauppa</Button>;
       case 2:
-        return <BenefitsPage />;
+        return <BenefitsPage setPage={props.setPage} />;
       case 3:
         return <StatPage />;
       default:

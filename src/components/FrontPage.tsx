@@ -17,6 +17,8 @@ function FrontPage(props: FrontPageProps) {
         setPage={props.setPage}
         destinationPage={3}
         title="Kierrätyksesi vaikutus"
+        imageName="chart"
+        buttonText="Tilastot"
         text="Katso kaavioiden avulla kuinka paljon asiointisi Kierrätyskeskuksessa on säästänyt luontoa verrattuna mediaanikuluttajaan."
       />
     </>
