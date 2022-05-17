@@ -1,4 +1,5 @@
 import React from "react";
+import ControlledSpeedDial from "../ControlledSpeedDial";
 import ReusableCard from "../ReusableCard";
 import "./store.css";
 
@@ -59,6 +60,9 @@ function StorePage(props: StorePageProps) {
           buttonText="Osta"
           text="Hieno pyörä."
         />
+      </div>
+      <div className="bottom-right">
+        <ControlledSpeedDial />
       </div>
     </>
   );
