@@ -31,7 +31,7 @@ function StaticsCard(props: StaticsCardProps) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button onClick={() => {props.setPage(2)}} size="small" color="primary">
+        <Button onClick={() => {props.setPage(3)}} size="small" color="primary">
           Avaa tilastot
         </Button>
       </CardActions>
