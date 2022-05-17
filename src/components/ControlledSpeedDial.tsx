@@ -8,13 +8,20 @@ import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import Badge from '@mui/material/Badge';
 
 const actions = [
-  { icon: <ShoppingCartCheckoutIcon />, name: 'Maksamaan' },
+  { icon: <ShoppingCartCheckoutIcon />, name: 'Maksa' },
   { icon: <RemoveShoppingCartIcon />, name: 'Tyhjennä' },
 ];
+
+interface customerScore {
+  co2: number;
+  water: number;
+  rentDays: number;
+}
 
 interface ControlledSpeedDialProps {
   itemAmount: number;
   setItemAmount: (amount: number) => void;
+  setCustomerScore: React.Dispatch<React.SetStateAction<customerScore>>;
 }
 
 function ControlledSpeedDial(props: ControlledSpeedDialProps) {
@@ -24,6 +31,14 @@ function ControlledSpeedDial(props: ControlledSpeedDialProps) {
     setOpen(false)
     props.setItemAmount(0);
   };
+  const handlePayment = () => {
+    props.setCustomerScore((prevState) => ({
+      co2: prevState.co2 + (2 * props.itemAmount),
+      water: prevState.water + (5 * props.itemAmount),
+      rentDays: prevState.rentDays + props.itemAmount,
+    }));
+    handleClose();
+  }
 
   return (
     <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
@@ -45,7 +60,7 @@ function ControlledSpeedDial(props: ControlledSpeedDialProps) {
             icon={action.icon}
             tooltipTitle={action.name}
             tooltipOpen
-            onClick={handleClose}
+            onClick={action.name === "Maksa" ? handlePayment : handleClose}
           />
         ))}
       </SpeedDial>

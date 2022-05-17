@@ -5,8 +5,15 @@ import ReusableCard from "../ReusableCard";
 import ShopDrawer from "../ShopDrawer";
 import "./store.css";
 
+interface customerScore {
+  co2: number;
+  water: number;
+  rentDays: number;
+}
+
 interface StorePageProps {
   setPage: (page: number) => void;
+  setCustomerScore: React.Dispatch<React.SetStateAction<customerScore>>;
 }
 
 function StorePage(props: StorePageProps) {
@@ -68,7 +75,7 @@ function StorePage(props: StorePageProps) {
       </div>
       <Pagination sx={{ mb: 5 }} count={10} color="primary" />
       <div className="bottom-right">
-        <ControlledSpeedDial setItemAmount={setItemAmount} itemAmount={itemAmount} />
+        <ControlledSpeedDial setCustomerScore={props.setCustomerScore} setItemAmount={setItemAmount} itemAmount={itemAmount} />
       </div>
     </>
   );

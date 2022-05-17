@@ -9,7 +9,17 @@ import Divider from "@mui/material/Divider";
 import Co2Icon from "@mui/icons-material/Co2";
 import Modal from "./Modal";
 
-function Statics() {
+interface customerScore {
+  co2: number;
+  water: number;
+  rentDays: number;
+}
+
+interface StaticsProps {
+  customerScore: customerScore;
+}
+
+function Statics(props: StaticsProps) {
   return (
     <List
       sx={{
@@ -24,7 +34,10 @@ function Statics() {
             <Co2Icon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="CO2 päästöjä säästetty" secondary="20 kg" />
+        <ListItemText
+          primary="CO2 päästöjä säästetty"
+          secondary={`${props.customerScore.co2} kiloa`}
+        />
         <Modal
           title="CO2 päästöjä säästetty"
           text="Tämä luku kertoo kuinka paljon hiilidioksidipäästöjä olet säästänyt luonnolta ostoksiesi avulla."
@@ -37,7 +50,10 @@ function Statics() {
             <InvertColorsIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Vettä säästetty" secondary="120 L" />
+        <ListItemText
+          primary="Vettä säästetty"
+          secondary={`${props.customerScore.water} litraa`}
+        />
         <Modal
           title="Vettä säästetty"
           text="Litramäärä kertoo kuinka paljon puhdasta juomakelpoista vettä olet säästänyt ostoksiesi avulla."
@@ -50,7 +66,7 @@ function Statics() {
             <AccessTimeIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Vuokrapäiviä kerätty" secondary="3 päivää" />
+        <ListItemText primary="Vuokrapäiviä kerätty" secondary={`${props.customerScore.rentDays} päivää`} />
         <Modal
           title="Vuokrapäiviä kerätty"
           text="Kanta-asiakkaana ostoksesi kerryttävät vuokrapäiviä, joiden avulla voit lainata meiltä esimerkiksi polkupyörän."

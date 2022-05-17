@@ -7,9 +7,20 @@ import { ThemeProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
 import Disclaimer from "./components/Disclaimer";
 
+interface customerScore {
+  co2: number;
+  water: number;
+  rentDays: number;
+}
+
 function App() {
   const [page, setPage] = useState<number>(0);
-  const [darkMode, setDarkMode] = useState<any>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [customerScore, setCustomerScore] = useState<customerScore>({
+    co2: 10,
+    water: 120,
+    rentDays: 3,
+  });
 
   return (
     <>
@@ -19,7 +30,7 @@ function App() {
         <div className="application">
           <TopDrawer setDarkMode={setDarkMode} setPage={setPage} />
           <div className="main-area">
-            <MainView page={page} setPage={setPage} />
+            <MainView setCustomerScore={setCustomerScore} customerScore={customerScore} page={page} setPage={setPage} />
           </div>
           <BottomNav page={page} setPage={setPage} />
         </div>
