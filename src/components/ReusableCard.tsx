@@ -13,6 +13,7 @@ interface ReusableCardProps {
   title: string;
   text: string;
   imageName: string;
+  imageHeight: number;
   buttonText: string;
 }
 
@@ -35,7 +36,7 @@ function ReusableCard(props: ReusableCardProps) {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="225"
+          height={props.imageHeight}
           image={correctImage}
           alt="green iguana"
           onClick={() => {props.setPage(props.destinationPage)}}

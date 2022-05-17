@@ -14,6 +14,7 @@ function FrontPage(props: FrontPageProps) {
       <QrCodeCard />
       <Statics />
       <ReusableCard
+        imageHeight={225}
         setPage={props.setPage}
         destinationPage={3}
         title="Kierrätyksesi vaikutus"

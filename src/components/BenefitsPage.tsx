@@ -10,6 +10,7 @@ function BenefitsPage(props: BenefitsPageProps) {
     <>
       <h1>Kanta-asiakasedut</h1>
       <ReusableCard
+        imageHeight={225}
         setPage={props.setPage}
         destinationPage={1}
         imageName="bike"
