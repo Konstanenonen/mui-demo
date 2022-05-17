@@ -12,3 +12,11 @@
   bottom: 60px;
   right: 20px;
 }
+
+@media screen and (min-width: 800px) {
+  .bottom-right {
+    position: sticky !important;
+    bottom: 60px;
+    left: 400px;
+  }
+}
