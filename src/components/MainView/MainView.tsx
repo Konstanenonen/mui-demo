@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
 import React from 'react';
+import BenefitsPage from '../BenefitsPage';
 import FrontPage from '../FrontPage';
 import StatPage from '../StatPage';
 import './main.css';
@@ -18,7 +19,7 @@ function MainView(props: MainViewProps) {
       case 1:
         return <Button variant="text">Verkkokauppa</Button>;
       case 2:
-        return <Button variant="text">Kanta-asiakasedut</Button>;
+        return <BenefitsPage />;
       case 3:
         return <StatPage />;
       default:

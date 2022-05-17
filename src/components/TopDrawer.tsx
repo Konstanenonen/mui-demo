@@ -16,13 +16,13 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import HomeIcon from '@mui/icons-material/Home';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import InsightsIcon from '@mui/icons-material/Insights'
 import DarkModeSwitch from './DarkModeSwitch/DarkModeSwitch';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import SettingsIcon from '@mui/icons-material/Settings';
+import PersonIcon from '@mui/icons-material/Person';
 
 const drawerWidth = 240;
 
@@ -172,16 +172,22 @@ function TopDrawer(props: TopDrawerProps) {
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+        <ListItem disablePadding>
+            <ListItemButton onClick={() => handlePageChange(4)}>
+              <ListItemIcon>
+                <PersonIcon />
+              </ListItemIcon>
+              <ListItemText primary="Profiili" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => handlePageChange(5)}>
+              <ListItemIcon>
+                <SettingsIcon />
+              </ListItemIcon>
+              <ListItemText primary="Asetukset" />
+            </ListItemButton>
+          </ListItem>
         </List>
       </Drawer>
       <Main open={open}>
