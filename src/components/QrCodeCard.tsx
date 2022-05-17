@@ -21,10 +21,7 @@ function QrCodeCard() {
           Kanta-asiakaskorttisi
         </Typography>
         <Typography sx={{ mb: 1, textAlign: "center" }} variant="body2" color="text.secondary">
-          Näytä tämä kortti maksaessasi kassalla.
-        </Typography>
-        <Typography  sx={{ textAlign: "center" }} variant="body2" color="text.secondary">
-          Kanta-asiakasnumerosi: <span style={{ fontWeight: "bold" }}>23123123</span>
+          Näytä tämä kortti maksaessasi kassalla. Kanta-asiakasnumerosi: <span style={{ fontWeight: "bold" }}>23123123</span>
         </Typography>
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "center" }}>
