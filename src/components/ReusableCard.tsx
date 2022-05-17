@@ -31,7 +31,7 @@ function ReusableCard(props: ReusableCardProps) {
   const correctImage = chooseImage(props.imageName);
 
   return (
-    <Card sx={{ width: 300 }}>
+    <Card sx={{ maxWidth: 300 }}>
       <CardActionArea>
         <CardMedia
           component="img"

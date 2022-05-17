@@ -3,6 +3,7 @@ import React from 'react';
 import BenefitsPage from '../BenefitsPage';
 import FrontPage from '../FrontPage';
 import StatPage from '../StatPage';
+import StorePage from '../StorePage/StorePage';
 import './main.css';
 
 interface MainViewProps {
@@ -17,7 +18,7 @@ function MainView(props: MainViewProps) {
       case 0:
         return <FrontPage setPage={props.setPage} />;
       case 1:
-        return <Button variant="text">Verkkokauppa</Button>;
+        return <StorePage setPage={props.setPage} />;
       case 2:
         return <BenefitsPage setPage={props.setPage} />;
       case 3:
