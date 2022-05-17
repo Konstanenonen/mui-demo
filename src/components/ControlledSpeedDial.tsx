@@ -22,6 +22,7 @@ interface ControlledSpeedDialProps {
   itemAmount: number;
   setItemAmount: (amount: number) => void;
   setCustomerScore: React.Dispatch<React.SetStateAction<customerScore>>;
+  setMessageOpen: (state: boolean) => void;
 }
 
 function ControlledSpeedDial(props: ControlledSpeedDialProps) {
@@ -38,6 +39,7 @@ function ControlledSpeedDial(props: ControlledSpeedDialProps) {
       rentDays: prevState.rentDays + props.itemAmount,
     }));
     handleClose();
+    props.setMessageOpen(true);
   }
 
   return (
