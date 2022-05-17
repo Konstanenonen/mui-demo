@@ -7,8 +7,15 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import CategoryIcon from "@mui/icons-material/Category";
 import Divider from "@mui/material/Divider";
+import DirectionsBikeIcon from '@mui/icons-material/DirectionsBike';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import CountertopsIcon from '@mui/icons-material/Countertops';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import SportsBaseballIcon from '@mui/icons-material/SportsBaseball';
+import BrushIcon from '@mui/icons-material/Brush';
+import LoyaltyIcon from '@mui/icons-material/Loyalty';
+import FiberNewIcon from '@mui/icons-material/FiberNew';
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
@@ -44,22 +51,22 @@ function ShopDrawer() {
     >
       <List>
         {[
-          "Polkupyörät",
-          "Kirjat",
-          "Koti ja asuminen",
-          "Viihde ja elktroniikka",
-          "Urheilu ja Harrastukset",
-          "Käsityö ja askartelu",
-          "Ale",
-          "Uutuudet",
-        ].map((text, index) => (
+          {name: "Polkupyörät", icon: <DirectionsBikeIcon />},
+          {name: "Kirjat", icon: <MenuBookIcon />},
+          {name: "Koti ja asuminen", icon: <CountertopsIcon />},
+          {name: "Viihde ja elektroniikka", icon: <SportsEsportsIcon />},
+          {name: "Urheilu ja harrastukset", icon: <SportsBaseballIcon />},
+          {name: "Käsityö ja askartelu", icon: <BrushIcon />},
+          {name: "Ale", icon: <LoyaltyIcon />},
+          {name: "Uutuudet", icon: <FiberNewIcon />},
+        ].map((item, index) => (
           <>
-            <ListItem key={text} disablePadding>
+            <ListItem key={item.name} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <CategoryIcon />
+                  {item.icon}
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={item.name} />
               </ListItemButton>
             </ListItem>
             <Divider />

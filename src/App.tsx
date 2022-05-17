@@ -30,7 +30,12 @@ function App() {
         <div className="application">
           <TopDrawer setDarkMode={setDarkMode} setPage={setPage} />
           <div className="main-area">
-            <MainView setCustomerScore={setCustomerScore} customerScore={customerScore} page={page} setPage={setPage} />
+            <MainView
+              setCustomerScore={setCustomerScore}
+              customerScore={customerScore}
+              page={page}
+              setPage={setPage}
+            />
           </div>
           <BottomNav page={page} setPage={setPage} />
         </div>
