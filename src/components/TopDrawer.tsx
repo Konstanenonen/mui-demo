@@ -100,7 +100,7 @@ function TopDrawer(props: TopDrawerProps) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar sx={{ backgroundColor: '#00A77E' }} position="fixed" open={open}>
         <Toolbar>
           <IconButton
             color="inherit"
