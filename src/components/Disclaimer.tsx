@@ -1,16 +1,14 @@
+import { Alert } from "@mui/material";
 import React from "react";
 
 function Disclaimer() {
   return (
     <div className="disclaimer">
-      <p>
+      <Alert severity="warning">
         Tämä on puhelinsovellus, pienennä selaimesi ikkunan leveyttä parhaimman
-        käytettävyyden mahdollistamiseksi.
-      </p>
-      <p>
-        Kun tämä teksti ja sovelluksen kehykset katoavat, ikkunasi on tarpeeksi pieni ideaaliin
-        käyttöön.
-      </p>
+        käytettävyyden mahdollistamiseksi. Kun tämä teksti ja sovelluksen
+        kehykset katoavat, ikkunasi on tarpeeksi pieni ideaaliin käyttöön.
+      </Alert>
     </div>
   );
 }
