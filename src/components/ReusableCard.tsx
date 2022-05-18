@@ -7,6 +7,7 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 import Chart from '../images/cool-chart.png';
 import Bike from '../images/bike.jpg';
 import Shirts from '../images/shirts.jpg';
+import Balloons from '../images/balloons.jpg';
 
 interface ReusableCardProps {
   handleClick: () => void;
@@ -26,6 +27,8 @@ function ReusableCard(props: ReusableCardProps) {
         return Bike;
       case "shirts":
         return Shirts;
+      case "balloons":
+        return Balloons;
       default:
         return Chart;
     }
