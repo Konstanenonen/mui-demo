@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Statics from "./Statics";
 import Chart from "../images/cool-chart.png";
-import Chart2 from "../images/second-chart.png";
+import Chart2 from "../images/cool-chart2.png";
 import { Alert, AlertTitle, Box, Tabs, Tab } from "@mui/material";
 
 interface customerScore {
