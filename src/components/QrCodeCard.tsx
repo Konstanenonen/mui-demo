@@ -5,8 +5,12 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Rick from "../images/rick.svg";
 import { Switch, FormGroup, FormControlLabel } from "@mui/material";
+import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
+import { useState } from "react";
 
 function QrCodeCard() {
+  const [digiReceiptOn, setDigiReceiptOn] = useState<boolean>(true);
+
   return (
     <Card variant="outlined" sx={{ width: 300 }}>
       <CardMedia
@@ -36,8 +40,17 @@ function QrCodeCard() {
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "center" }}>
         <FormGroup>
-          <FormControlLabel control={<Switch defaultChecked />} label="Sähköinen kuitti" />
+          <FormControlLabel
+            control={
+              <Switch
+                defaultChecked
+                onClick={() => setDigiReceiptOn((prevState) => !prevState)}
+              />
+            }
+            label="Sähköinen kuitti"
+          />
         </FormGroup>
+        <ReceiptLongIcon color={digiReceiptOn ? "primary" : "disabled"} />
       </CardActions>
     </Card>
   );
