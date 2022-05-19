@@ -34,8 +34,7 @@ function QrCodeCard() {
           variant="body2"
           color="text.secondary"
         >
-          Näytä tämä kortti maksaessasi kassalla. Kanta-asiakasnumerosi:{" "}
-          <span style={{ fontWeight: "bold" }}>23123123</span>
+          Näytä tämä kortti kassalla.
         </Typography>
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "center" }}>
