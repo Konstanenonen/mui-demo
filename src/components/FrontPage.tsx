@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import QrCodeCard from "./QrCodeCard";
 import ReusableCard from "./ReusableCard";
 import Statics from "./Statics";
@@ -15,6 +15,11 @@ interface FrontPageProps {
 }
 
 function FrontPage(props: FrontPageProps) {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <h1>Etusivu</h1>

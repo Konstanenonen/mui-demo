@@ -1,5 +1,5 @@
 import { Pagination } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ControlledSpeedDial from "../ControlledSpeedDial";
 import ReusableCard from "../ReusableCard";
 import ShopDrawer from "../ShopDrawer";
@@ -24,6 +24,10 @@ interface StorePageProps {
 function StorePage(props: StorePageProps) {
   const [itemAmount, setItemAmount] = useState<number>(0);
   const [messageOpen, setMessageOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

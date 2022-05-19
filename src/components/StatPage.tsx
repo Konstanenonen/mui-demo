@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Statics from "./Statics";
 import Chart from "../images/cool-chart.png";
 import Chart2 from "../images/cool-chart2.png";
@@ -15,7 +15,11 @@ interface StatPageProps {
 }
 
 function StatPage(props: StatPageProps) {
-  const [value, setValue] = React.useState("one");
+  const [value, setValue] = useState("one");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);

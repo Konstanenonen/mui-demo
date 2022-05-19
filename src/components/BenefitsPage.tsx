@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReusableCard from "./ReusableCard";
 
 interface BenefitsPageProps {
@@ -6,6 +6,11 @@ interface BenefitsPageProps {
 }
 
 function BenefitsPage(props: BenefitsPageProps) {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const cardArray = [
     {
       imageHeight: 225,
