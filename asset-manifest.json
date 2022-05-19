@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mui-demo/static/css/main.9213b6ff.css",
-    "main.js": "/mui-demo/static/js/main.61207eca.js",
+    "main.js": "/mui-demo/static/js/main.46b438ab.js",
     "static/media/receipt.jpg": "/mui-demo/static/media/receipt.e7bb1709eac8aa598bef.jpg",
     "static/media/balloons.jpg": "/mui-demo/static/media/balloons.112fd90864969b960291.jpg",
     "static/media/bike.jpg": "/mui-demo/static/media/bike.985f6e7dc8e9577ef6b3.jpg",
@@ -11,10 +11,10 @@
     "static/media/rick.svg": "/mui-demo/static/media/rick.ef7e56d24e7f4f4a180d635bf18b7d14.svg",
     "index.html": "/mui-demo/index.html",
     "main.9213b6ff.css.map": "/mui-demo/static/css/main.9213b6ff.css.map",
-    "main.61207eca.js.map": "/mui-demo/static/js/main.61207eca.js.map"
+    "main.46b438ab.js.map": "/mui-demo/static/js/main.46b438ab.js.map"
   },
   "entrypoints": [
     "static/css/main.9213b6ff.css",
-    "static/js/main.61207eca.js"
+    "static/js/main.46b438ab.js"
   ]
 }
