@@ -31,6 +31,14 @@ function BenefitsPage(props: BenefitsPageProps) {
       buttonText: "Tulevat kamppanjat",
       text: "Tulevistä kamppanjoistamme tiedotetaan ensimmäisenä aina kanta-asiakassovelluksessamme. Kanta-asiakkaat voivat myös antaa palautetta tulevista kamppanjoista ja mahdollisesti vaikuttaa niiden sisältöön!",
     },
+    {
+      imageHeight: 225,
+      handleClick: () => props.setPage(1),
+      imageName: "receipt",
+      title: "Vaihda kuittisi sähköisiksi",
+      buttonText: "Tarkastele kuittejasi",
+      text: "Kun näytät digitaalista kanta-asiakaskorttiasi maksaessasi, voit valita että kuittisi tulee sähköisesti kanta-asiakassovellukseesi. Näin kuittisi pysyy varmasti tallessa ja luonto kiittää!",
+    },
   ];
 
   const cardElements = cardArray.map(card => (

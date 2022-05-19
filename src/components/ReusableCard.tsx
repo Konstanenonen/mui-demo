@@ -8,6 +8,7 @@ import Chart from '../images/cool-chart.png';
 import Bike from '../images/bike.jpg';
 import Shirts from '../images/shirts.jpg';
 import Balloons from '../images/balloons.jpg';
+import Receipt from '../images/receipt.jpg';
 
 interface ReusableCardProps {
   handleClick: () => void;
@@ -29,6 +30,8 @@ function ReusableCard(props: ReusableCardProps) {
         return Shirts;
       case "balloons":
         return Balloons;
+      case "receipt":
+        return Receipt;
       default:
         return Chart;
     }
