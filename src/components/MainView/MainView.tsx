@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React from "react";
 import BenefitsPage from "../BenefitsPage";
 import FrontPage from "../FrontPage";
@@ -43,7 +44,12 @@ function MainView(props: MainViewProps) {
       case 4:
         return <ProfilePage />;
       case 5:
-        return <h1>Asetukset</h1>;
+        return (
+          <>
+            <h1>Asetukset</h1>
+            <Button sx={{ backgroundColor: "red", color: "white" }}>Kirjaudu ulos</Button>
+          </>
+        );
       default:
         return <h1>404 Sivua ei löytynyt</h1>;
     }
