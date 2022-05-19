@@ -54,6 +54,7 @@ function BenefitsPage(props: BenefitsPageProps) {
 
   return (
     <>
+      <h1>Kanta-asiakasedut</h1>
       {cardElements}
     </>
   );
