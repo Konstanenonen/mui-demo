@@ -62,7 +62,8 @@ function DarkModeSwitch(props: DarkModeSwitchProps) {
         control={<MaterialUISwitch onClick={
           () => props.setDarkMode((prevState: boolean) => !prevState)
         }
-        sx={{ m: 1 }} defaultChecked />}
+        sx={{ m: 1 }}
+         />}
         label=""
       />
     </FormGroup>
