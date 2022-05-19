@@ -22,6 +22,14 @@ function FrontPage(props: FrontPageProps) {
       <Statics customerScore={props.customerScore} />
       <ReusableCard
         imageHeight={225}
+        handleClick={() => props.setPage(2)}
+        title="Kanta-asiakasetusi"
+        imageName="balloons"
+        buttonText="Etusi"
+        text="Kanta-asiakkaana sinulla on paljon käytettäviä etuja. Tutustu niihin tarkemmin edut-sivulta."
+      />
+      <ReusableCard
+        imageHeight={225}
         handleClick={() => props.setPage(3)}
         title="Kierrätyksesi vaikutus"
         imageName="chart"

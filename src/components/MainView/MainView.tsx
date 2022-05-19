@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import React from "react";
 import BenefitsPage from "../BenefitsPage";
 import FrontPage from "../FrontPage";
+import ProfilePage from "../ProfilePage";
 import StatPage from "../StatPage";
 import StorePage from "../StorePage/StorePage";
 import "./main.css";
@@ -40,8 +41,12 @@ function MainView(props: MainViewProps) {
         return <BenefitsPage setPage={props.setPage} />;
       case 3:
         return <StatPage customerScore={props.customerScore} />;
+      case 4:
+        return <ProfilePage />;
+      case 5:
+        return <h1>Asetukset</h1>;
       default:
-        return <Button variant="text">Jiit</Button>;
+        return <h1>404 Sivua ei löytynyt</h1>;
     }
   }
 
